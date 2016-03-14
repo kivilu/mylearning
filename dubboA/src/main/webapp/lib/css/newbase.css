@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* CSS Document */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, img{margin:0; padding:0;font:16px Microsoft YaHei;}
+body{background-color:#f9f9f9;}
+#logo{width:228px;height:41px;background:url(../images/logo.gif) 0 0 no-repeat;display:block;margin:10px 0;}
+.box-b h3{color:#f16f20;font-size:24px;margin:20px 0;}
+.grayborder{border:1px solid #e3e3e3;padding:20px;background-color:#fff;color:#4d4d4d;line-height:30px;}
+.grayborder .rowd{line-height:40px;padding:2px 0;}
+.grayborder .shortinput{border:1px solid #c1c1c1;width:100px;height:30px;line-height:30px;padding-left:5px;}
+.leftlabel{color:#999;width:90px;display:inline-block;text-align:right;}
+.toppart{border-bottom:1px dashed #e5e5e5;padding:15px 0;}
+.banklist{display:inline-block;width:760px;padding:10px 0;min-height:200px;}
+.banklist li{width:179px;display:inline-block;*display:inline;padding-bottom:10px;float:left;}
+.banklist li img{border: 1px solid #ccc;margin-left:5px;}
+.floatl{float:left;}
+.btnw129{width:129px;height:35px;background:url(../images/btn_bg1.png) no-repeat;color:#fff;text-align:center;line-height:35px;border:0px;cursor: pointer;}
+.btnw99{width:99px;height:35px;background:url(../images/btn_bg1.png) 0 -37px; no-repeat;color:#fff;text-align:center;line-height:35px;border:0px;}
+.btnw81{width:81px;height:30px;line-height:30px;background:url(../images/btn_bg1.png) 0 -74px no-repeat;color:#fff;text-align:center;border:0px;margin-left:20px;}
+.w175{width:185px;}
+.txtlabel{width:230px;display:inline-block;}
+.longinput{width:210px;border:1px solid #c1c1c1;height:30px;line-height:30px;padding-left:5px;}
+.grayborder .btngroup{padding:15px 0;}
+.bottompart{padding-top:15px;}
+.ml20{margin-left:20px;}
+.erroricon{width:90px;height:98px;display:inline-block;*display:inline;background:url(../images/btn_bg1.png) 0 -104px no-repeat;}
+.successicon{width:90px;height:98px;display:inline-block;*display:inline;background:url(../images/btn_bg1.png) 0 -207px no-repeat;}
+.tipdiv{position:relative;margin-left:200px;}
+.toptip{display:inline-block;position:absolute;top:5px;left:120px;color:#f16f20;font-size:30px;}
+.bottomtip{display:inline-block;position:absolute;top:55px;left:120px;color:#f16f20;font-size:24px;}
+.pl200 .rowd{padding-left:100px;}
+
+
+
+.autoTipContainer{
+	color: #575757;
+	font-family: "Microsoft YaHei","SimSun";
+	font-size: 12px;
+	font-size-adjust: none;
+	visibility: visible; 
+	position: absolute; 
+	z-index: 100;
+}
+.autoTipContainer table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.autoTipContainer .area1 {
+    background: url(../images/widget/tips/auto_tip_sprites.png) scroll 0 0 no-repeat;
+    _background: url(../images/widget/tips/auto_tip_sprites_ie.png) scroll 0 0 no-repeat;
+    width: 13px;
+    height: 23px;
+}
+
+.autoTipContainer .area2 {
+    background: url(../images/widget/tips/auto_tip_sprites.png) scroll 0 -51px repeat-x;
+    _background: url(../images/widget/tips/auto_tip_sprites_ie.png) scroll 0 -51px repeat-x;
+    width: 100%;
+}
+
+.autoTipContainer .area2 .arrow {
+    background: url(../images/widget/tips/auto_tip_sprites.png) scroll -16px 0 no-repeat;
+    _background: url(../images/widget/tips/auto_tip_sprites_ie.png) scroll -16px 0 no-repeat;
+    width: 18px;
+    height: 23px;
+}
+
+.autoTipContainer .area3 {
+    background: url(../images/widget/tips/auto_tip_sprites.png) scroll -37px 0 no-repeat;
+    _background: url(../images/widget/tips/auto_tip_sprites_ie.png) scroll -37px 0 no-repeat;
+    width: 13px;
+    height: 23px;
+}
+ 
+
+.autoTipContainer .area4 {
+    background: url(../images/widget/tips/auto_tip_vertical.png) scroll 0 0 repeat-y;
+    _background: url(../images/widget/tips/auto_tip_vertical_ie.png) scroll 0 0 repeat-y;
+    width: 13px;
+}
+
+.autoTipContainer .area5 {
+    font-weight: bold;
+    background: #FFFFCC;
+    padding: 0 6px;
+	font-size: 12px;
+}
+
+.autoTipContainer .area6 {
+    background: url("../images/widget/tips/tip_sprites.png") no-repeat scroll -33px -1px transparent;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+}
+
+.autoTipContainer .area7 {
+    background: url(../images/widget/tips/auto_tip_sprites.png) scroll 0 -23px no-repeat;
+    _background: url(../images/widget/tips/auto_tip_sprites_ie.png) scroll 0 -23px no-repeat;
+    width: 13px;
+    height: 26px;
+}
+
+.autoTipContainer .area8 {
+    background: url(../images/widget/tips/auto_tip_sprites.png) scroll 0 -74px repeat-x;
+    _background: url(../images/widget/tips/auto_tip_sprites_ie.png) scroll 0 -74px repeat-x;
+    width: 100%;
+}
+
+.autoTipContainer .area8 .arrow {
+    background: url(../images/widget/tips/auto_tip_sprites.png) scroll -16px -23px no-repeat;
+    _background: url(../images/widget/tips/auto_tip_sprites_ie.png) scroll -16px -23px no-repeat;
+    width: 18px;
+    height: 26px;
+}
+
+.autoTipContainer .area9 {
+    background: url(../images/widget/tips/auto_tip_sprites.png) scroll -37px -23px no-repeat;
+    _background: url(../images/widget/tips/auto_tip_sprites_ie.png) scroll -37px -23px no-repeat;
+    width: 13px;
+    height: 26px;
+}

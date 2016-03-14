@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[tranClient] %p %d [%t] %C{1}.%M(%L) | %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="DEBUG" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${catalina.base}//logs//tranClient_debug.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.txt'" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[tranClient] %p %d [%t] %C{1}.%M(%L) | %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="DEBUG" />
+			<param name="LevelMax" value="DEBUG" />
+		</filter>
+	</appender>
+
+	<appender name="INFO" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${catalina.base}//logs//tranClient_info.log" />
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.txt'" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[tranClient] %p %d [%t] %C{1}.%M(%L) | %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="INFO" />
+			<param name="LevelMax" value="INFO" />
+		</filter>
+	</appender>
+
+	<appender name="WARN" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${catalina.base}//logs//tranClient_warn.log" />
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.txt'" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[tranClient] %p %d [%t] %C{1}.%M(%L) | %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="WARN" />
+			<param name="LevelMax" value="WARN" />
+		</filter>
+	</appender>
+
+	<appender name="ERROR" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${catalina.base}//logs//tranClient_error.log" />
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.txt'" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[tranClient] %p %d [%t] %C{1}.%M(%L) | %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="ERROR" />
+			<param name="LevelMax" value="ERROR" />
+		</filter>
+	</appender>
+
+	<logger name="org">
+		<level value="error" />
+	</logger>
+	<logger name="net">
+		<level value="error" />
+	</logger>
+	<logger name="org.apache">
+		<level value="INFO" />
+	</logger>
+	<logger name="org.hibernate">
+		<level value="INFO" />
+	</logger>
+
+	<logger name="org.springframework.web">
+		<level value="INFO" />
+	</logger>
+	<logger name="org.springframework">
+		<level value="INFO" />
+	</logger>
+	
+	<logger name="org.displaytag">
+		<level value="error" />
+	</logger>
+	<logger name="com.mchange.v2">
+		<level value="error" />
+	</logger>
+	<logger name="com.danga.MemCached">
+		<level value="error"></level>
+	</logger>
+	<!-- sql transation config -->
+	<logger name="java.sql">
+		<level value="INFO"></level>
+	</logger>
+	<logger name="org.mybatis">
+		<level value="DEBUG"></level>
+	</logger>
+	<logger name="org.apache.ibatis">
+		<level value="DEBUG"></level>
+	</logger>
+	<logger name="org.springframework.jdbc.core">
+		<level value="DEBUG" />
+	</logger>
+	<logger name="org.springframework.jdbc">
+		<level value="DEBUG" />
+	</logger>
+	<logger name="org.springframework.transaction">
+		<level value="DEBUG" />
+	</logger>
+	<logger name="org.springframework.cache.ehcache">
+		<level value="DEBUG" />
+	</logger>
+	<logger name="net.sf.ehcache">
+		<level value="DEBUG" />
+	</logger>
+	<logger name="com.jyt">
+		<level value="DEBUG"></level>
+	</logger>
+
+	<appender name="ASYNC" class="org.apache.log4j.AsyncAppender">
+		<param name="locationInfo" value="true"/>
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="DEBUG" />
+		<appender-ref ref="INFO" />
+		<appender-ref ref="WARN" />
+		<appender-ref ref="ERROR" />
+	</appender>
+	
+	<root>
+		<priority value="INFO" />
+		<appender-ref ref="ASYNC" />
+	</root>
+
+</log4j:configuration>
